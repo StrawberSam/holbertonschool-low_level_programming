@@ -4,3 +4,4 @@
 3 - Write a function that prints the numbers, from 0 to 9, followed by a new line.
 4 - Write a function that prints the numbers, frome 0 to 9 followed by a new line. Do not print 2 and 4.
 5 - Write a function that draws a straight line in the terminal. Only use _putchar, where n is the number of times the character _ should be printed. Line end with \n and if n is 0 or less, the function shoud only print \n
+6 - Write a function that draws a straight line in the terminal. You can only use _putchar function to print. Where n is the number of times the character _ should be printed. The line should end with a \n. If n is 0 or less, the function should only print \n.
