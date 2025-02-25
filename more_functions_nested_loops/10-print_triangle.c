@@ -21,9 +21,9 @@ void print_triangle(int size)
 		for (ligne = 0; ligne < size; ligne++)
 		{
 
-			for (colonne = 0; colonne <= size; colonne++)
+			for (colonne = 0; colonne < size; colonne++)
 			{
-				if (colonne < (size - ligne))
+				if (colonne < ((size - ligne) - 1))
 				{
 					_putchar(' ');
 				}
