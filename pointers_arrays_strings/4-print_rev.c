@@ -15,7 +15,7 @@ void print_rev(char *s)
 		count++;
 	}
 
-	while (count >= 0) /*affiche la chaine en inverse*/
+	while (count > 0) /*affiche la chaine en inverse*/
 	{
 		count--;
 		_putchar(s[count]);
