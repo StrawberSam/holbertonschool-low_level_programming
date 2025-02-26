@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <limits.h>
 /**
  * swap_int - check the code
  * @a: character 1 for the two integers
@@ -9,12 +9,7 @@
 
 void swap_int(int *a, int *b)
 {
-	int c;
-
-	*a = 98;
-	*b = 42;
-
-	c = *a;
+	int tmp = *a;
 	*a = *b;
-	*b = c;
+	*b = tmp;
 }
