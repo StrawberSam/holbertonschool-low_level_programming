@@ -2,13 +2,14 @@
 
 /**
  * _strcat - check the code
- *
- * Return: Always 0.
+ * @dest:second string
+ * @src:first string
+ * Return: dest.
  */
 
- char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
-	int start = *src + *dest;
+	int start = *dest + *src;
 
 	while (*src++)
 	start++;
@@ -17,5 +18,6 @@
 	{
 		*src++ = *dest++;
 	}
-	*src = '\0';
+	*dest = '\0';
+	return (dest);
 }
