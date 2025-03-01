@@ -9,6 +9,9 @@
 
 char *_strcat(char *dest, char *src)
 {
+	 /*Sauvegarder l'adresse de départ de 'dest' pour pouvoir la retourner*/
+	 char *start = dest;
+
     /*Déplace le pointeur 'dest' à la fin de la chaîne existante.*/
 	while (*dest)
 	{
