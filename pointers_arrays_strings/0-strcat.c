@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include "2-strlen.c"/*compte la longueur de la chaine*/
 /**
  * _strcat - check the code
  * @dest:second string
@@ -9,22 +9,17 @@
 
 char *_strcat(char *dest, char *src)
 {
-	/*Déplace le pointeur 'dest' à la fin de la chaîne existante.*/
-	while (*dest)
+	int i = 0;/*déclare des variables et les incrémente*/
+	int j = 0;
+
+	while (dest[i] != '\0')/*permet de parcourir la chaine et s'arrête à \0*/
+		i++;
+	while (src[j] != '\0')/*fait la même*/
 	{
-		dest++;
+		dest[i] = src[j]; /*copie dest dans src*/
+		j++; /*incrémente j et i (passe au caractère suivant)*/
+		i++;
 	}
-
-    /*Copie le contenu de 'src' à la fin de 'dest'.*/
-	while (*src)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-
-    /* Ajouter un caractère nul à la fin de la nouvelle chaîne.*/
-	*dest = '\0';
-
-	return (dest);/*Retourner l'adresse originale de 'dest' avant la fin.*/
+	dest[i] = '\0';/*affiche \0 à la fin*/
+	return (dest);
 }
