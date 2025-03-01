@@ -11,7 +11,7 @@
 10 - Write a function that convert a string to an integer. The number in the string can be preceded by an infinite number of characters. You need to take into account all the - and + signs before the number. If there are no numbers in the string, the function must return 0. You are not allowed to use long. You are not allowed to declare new variable of type array and hard-code special values.
 0 - Write a function that concatenates two strings.
 1 - Write a function that concatenates two strings.
-2 -
+2 - Write a function that copies a string.
 3 -
 4 -
 5 -
