@@ -9,10 +9,7 @@
 
 char *_strcat(char *dest, char *src)
 {
-	 /*Sauvegarder l'adresse de départ de 'dest' pour pouvoir la retourner*/
-	 char *start = dest;
-
-    /*Déplace le pointeur 'dest' à la fin de la chaîne existante.*/
+	/*Déplace le pointeur 'dest' à la fin de la chaîne existante.*/
 	while (*dest)
 	{
 		dest++;
@@ -29,5 +26,5 @@ char *_strcat(char *dest, char *src)
     /* Ajouter un caractère nul à la fin de la nouvelle chaîne.*/
 	*dest = '\0';
 
-	return (dest);/*Retourner l'adresse originale de 'dest'.*/
+	return (dest);/*Retourner l'adresse originale de 'dest' avant la fin.*/
 }
