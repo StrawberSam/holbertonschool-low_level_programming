@@ -19,3 +19,4 @@
 7 - Write a function that encodes a string into 1337.
 0 - Write a function that fills memory with a constant byte.
 1 - Write a function that copies memory area.
+2 - Write a function that locates a character in a string.
