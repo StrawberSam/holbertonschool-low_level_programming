@@ -9,18 +9,19 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i = 0;
+	int i;
 
-	while (s)
+	while (*s != '\0')  /*On vérifie jusqu'à la fin de la chaîne s*/
 	{
-		while (accept[i] != '\0')
+		i = 0; /*Réinitialiser i avant de commencer la comparaison*/
+		while (accept[i] != '\0') /*On parcourt la chaîne accept*/
 		{
-			if (*s == accept[i])
-				return (s);
+			if (*s == accept[i]) /*Si le caractère courant de s est dans accept*/
+				return (s); /*On retourne le pointeur s*/
 			i++;
 		}
-		i = 0;
-		s++;
+		s++;  /*On avance au caractère suivant de la chaîne s*/
 	}
-	return ('\0');
+
+	return (NULL);  /*Retourne NULL si aucune correspondance n'est trouvée*/
 }
