@@ -1,19 +1,23 @@
 #include "main.h"
 
 /**
- * @brief
+ *_strstr - function that locates a substring
  *
+ *@haystack: la principale chaine
+ *@needle: la chaine secondaire
+ *Return: needle
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0;
+	int count = 0;
 
-	while (haystack[i] != '\0')
+	while (haystack[count] != '\0' && needle[count] != '\0')
 	{
-		if (haystack[i] != needle[0])
-		return (needle);
+		int i;
+
+		for (i = 0; haystack[i] != needle[i]; i++)
+			return (needle);
 	}
-	i++;
 	return (NULL);
 }
