@@ -11,7 +11,7 @@ char *_strpbrk(char *s, char *accept)
 {
 	int i;
 
-	while (*s != '\0')  /*On vérifie jusqu'à la fin de la chaîne s*/
+	while (*s != '\0')  /*On parcourt la chaîne s*/
 	{
 		i = 0; /*Réinitialiser i avant de commencer la comparaison*/
 		while (accept[i] != '\0') /*On parcourt la chaîne accept*/
