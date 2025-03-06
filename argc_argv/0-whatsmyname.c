@@ -2,13 +2,17 @@
 
 /**
  *main - program that prints its name
- *Result: name of the prog
+ *@argc: argument count
+ *@argv: argument vector or value
+ *Return: name of the prog
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc > 0)
 	printf("%s\n", argv[0]);
+
+
 
 	return (0);
 }
