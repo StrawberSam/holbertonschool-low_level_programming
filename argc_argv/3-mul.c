@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	long int num1, num2, result;
+	int num1, num2, result;
 
 	if (argc != 3)
 	{
@@ -19,11 +19,11 @@ int main(int argc, char *argv[])
 	}
 
 	num1 = atoi(argv[1]); /*convertis les arguments en entiers*/
-	num2 = atoi(argv[2]); /*les fait passer de char à int*/
+	num2 = atoi(argv[2]);
 
 	result = num1 * num2;
 
-	printf("%ld\n", result);
+	printf("%d\n", result);
 
 	return (0);
 }
