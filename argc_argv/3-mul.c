@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	}
 
 	num1 = atoi(argv[1]); /*convertis les arguments en entiers*/
-	num2 = atoi(argv[2]);
+	num2 = atoi(argv[2]); /*les fait passer de char à int*/
 
 	result = num1 * num2;
 
