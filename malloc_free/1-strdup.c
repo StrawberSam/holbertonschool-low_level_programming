@@ -8,11 +8,16 @@
 
 char *_strdup(char *str)
 {
-	int count, i;
-	char *str2 = malloc(*str);
+	int count = 0, i;
+	char *str2 = malloc(count + 1);
 
 
 	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	if (str2 == NULL)
 	{
 		return (NULL);
 	}
@@ -26,5 +31,7 @@ char *_strdup(char *str)
 	{
 		str2[i] = str[i];
 	}
+	str2[i] = '\0';
+
 	return (str2);
 }
