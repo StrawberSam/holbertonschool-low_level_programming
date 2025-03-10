@@ -9,15 +9,9 @@
 char *_strdup(char *str)
 {
 	int count = 0, i;
-	char *str2 = malloc(count + 1);
-
+	char *str2;
 
 	if (str == NULL)
-	{
-		return (NULL);
-	}
-
-	if (str2 == NULL)
 	{
 		return (NULL);
 	}
@@ -27,10 +21,18 @@ char *_strdup(char *str)
 		count++;
 	}
 
+	str2 = malloc(count + 1);
+
+	if (str2 == NULL)
+	{
+		return (NULL);
+	}
+
 	for (i = 0; i < count; ++i)
 	{
 		str2[i] = str[i];
 	}
+
 	str2[i] = '\0';
 
 	return (str2);
