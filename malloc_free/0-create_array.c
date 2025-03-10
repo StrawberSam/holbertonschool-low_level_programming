@@ -12,10 +12,7 @@ char *create_array(unsigned int size, char c)
 	char *tableau = malloc(size);
 	unsigned int i;
 
-	for (i = 0; i < size; i++)
-	{
-		tableau[i] = c;
-	}
+
 
 	if (size == 0)
 	{
@@ -27,5 +24,9 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
-return (tableau);
+	for (i = 0; i < size; i++)
+	{
+		tableau[i] = c;
+	}
+	return (tableau);
 }
