@@ -9,7 +9,7 @@
 
 char *create_array(unsigned int size, char c)
 {
-	char *tableau = malloc(size * sizeof(char));
+	char *tableau = malloc(size);
 	unsigned int i;
 
 	if (size == 0)
