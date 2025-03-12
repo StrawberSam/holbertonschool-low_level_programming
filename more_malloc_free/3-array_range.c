@@ -11,16 +11,16 @@ int *array_range(int min, int max)
 {
 	int *tableau, total, i;
 
-	if (min > max)
+	if (min > max)/*vérification de si min est plus grnd que max*/
 	return (NULL);
 
-	total = max - min + 1;
-	tableau = malloc(total * sizeof(int));
+	total = max - min + 1;/*faire un total pour y allouer la mémoire*/
+	tableau = malloc(total * sizeof(int));/*allocation mémoire*/
 
-	if (tableau == NULL)
+	if (tableau == NULL)/*vérif si malloc n'a pas fonctionné*/
 	return (NULL);
 
-	for (i = 0; i < total; i++)
+	for (i = 0; i < total; i++)/*ajoute min max dans le tableau+ leur valeur*/
 	{
 		tableau[i] = min + i;
 	}
