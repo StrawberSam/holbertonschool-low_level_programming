@@ -9,17 +9,18 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int *tableau, nmb;
+	char *tableau;
+	unsigned int nmb;
 
-	if (nmemb == 0 || size == 0)
+	if (nmemb == 0 || size == 0)/*si nmemb ou size ==0, return null*/
 	return (NULL);
 
-	tableau = malloc(nmemb * sizeof(size));
+	tableau = malloc(nmemb * size);/*alloue mémoire pour nmemb*/
 
-	if (tableau == NULL)
+	if (tableau == NULL)/*si ça n'a pas marché, renvoie null*/
 	return (NULL);
 
-	for (nmb = 0; nmb < nmemb; nmb++)
+	for (nmb = 0; nmb < nmemb * size; nmb++)/*allocation mémoire mis à 0*/
 	{
 		tableau[nmb] = 0;
 	}
