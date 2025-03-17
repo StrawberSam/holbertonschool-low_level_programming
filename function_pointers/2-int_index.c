@@ -10,7 +10,7 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i, result;
+	int i;
 
 	if (size <= 0)
 	{
@@ -19,14 +19,10 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	for (i = 0; i < size; i++)/*parcours les élements du tableau*/
 	{
-		cmp(array[i]); /*pour chaque élements, appeler la fonction cmp*/
-
-		result = cmp(array[i]);/*stock le résultat*/
-
-		if (result != 0)/*vérifie le resultat*/
-		{
+		if (cmp(array[i]) != 0)/*pour chaque élements, appeler la fonction cmp*/
+		{ /*vérifie le résultat*/
 			return (i);
 		}
 	}
-	return (-1);/*retourne -1 quand les éléments ne match pas*/
+	return (-1);/*retourne -1 si rien n'a été trouvé*/
 }
