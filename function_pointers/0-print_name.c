@@ -3,7 +3,7 @@
 /**
  *print_name - function that print a name
  *@name: nom
- *@f:pointeur qui pointe une variable
+ *@f:pointeur qui pointe une fonction
  *Return: rien car void
  */
 
