@@ -7,7 +7,7 @@
  *Return: 0
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int num1, num2, resultat;
 	int (*operation)(int, int);
@@ -38,5 +38,5 @@ int main (int argc, char *argv[])
 	resultat = operation(num1, num2);
 	printf("%d\n", resultat);
 
-	return(0);
+	return (0);
 }
