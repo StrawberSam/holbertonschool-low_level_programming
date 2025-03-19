@@ -9,7 +9,7 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	/*déclare i, total en initialisant et un objet pr manipuler les arguments*/
-	size_t i, total = 0;
+	unsigned int i, total = 0;
 	va_list args;
 	/*boucle if si n == 0, return 0*/
 	if (!n)
@@ -19,7 +19,7 @@ int sum_them_all(const unsigned int n, ...)
 /*boucle pour additionner les arguments*/
 	for (i = 0; i < n; i++)
 	{
-		total += va_arg(args, size_t);
+		total += va_arg(args, unsigned int);
 	}
 /*+= C'est un opérateur d'addition et d'affectation. Il ajoute la valeur à
 droite de l'opérateur à la variable à gauche. ça équivaut à total = total + x*/
