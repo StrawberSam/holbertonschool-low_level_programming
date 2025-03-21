@@ -12,8 +12,8 @@
  */
 typedef struct type_handler
 {
-    char symbol;
-    void (*print_func)(va_list arguments);
+	char symbol;
+	void (*print_func)(va_list arguments);
 } type_handler;
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
