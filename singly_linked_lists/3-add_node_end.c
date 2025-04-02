@@ -2,6 +2,23 @@
 #include <stddef.h>
 
 /**
+ *_strlen - returns the length of a string
+ *@s: it's a caracters chain*
+ *Return: the length of a string
+ */
+int _strlen(const char *s)
+{
+	int length = 0;
+
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
+	return (length);
+}
+
+/**
  * add_node_end - Ajoute un nouveau nœud à la fin d'une liste chaînée
  * @head: Pointeur vers l'adresse du premier nœud de la liste
  * @str: Chaîne de caractères à copier dans le nouveau nœud
@@ -9,6 +26,8 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
+	list_t *temp = *head;/*on déclare un pointeur temporaire*/
+
 	/*aloue la mémoire pour un nouveau noeud*/
 	/*taille de la valeur + taille du ptr = list_t*/
 	list_t *new_noeud = malloc(sizeof(list_t));
@@ -24,6 +43,8 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL); /*et on retourne null*/
 	}
 
+	/*on utilise la fonction _strlen pour compter la length*/
+	new_noeud->len = _strlen(str);
 	new_noeud->next = NULL; /* Le nouveau nœud est le dernier */
 
 	/* Si la liste est vide, on met à jour la tête */
@@ -32,17 +53,14 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = new_noeud;
 		return (new_noeud);
 	}
-
 	/* Sinon, on parcourt la liste pour trouver le dernier nœud */
 	/*on utilise un pointeur temporaire pour parcourir la liste*/
-	list_t *temp = *head;
-	while (temp->next != NULL) {
+
+	while (temp->next != NULL)
 		temp = temp->next;
-	}
 
 	/* On ajoute le nouveau nœud en fin de liste */
 	temp->next = new_noeud;
 
 	return (new_noeud);
 }
-
