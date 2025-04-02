@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stddef.h>
 
-/*
+/**
  *add_dnodeint - Fonction permettant d'ajouter un nœud au début
  *d'une liste doublement chaînée.
  *@head: Pointeur vers le pointeur de la tête de liste.
