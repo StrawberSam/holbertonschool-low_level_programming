@@ -26,7 +26,11 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	/*si la liste est non vide, maj le ptr "prev" vers l'ancienne tête*/
 	if (*head != NULL)
-		(*head)->prev = newnoeud;/*(*head) car double pointeur*/
+		(*head)->prev = newnoeud;
+		/**
+		 *(*head) car double pointeur et on veut avoir accès au contenu du
+		 * premier noeud
+		 */
 
 	*head = newnoeud;/*maj de la tête de liste*/
 
