@@ -27,6 +27,7 @@ int _strlen(const char *s)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *temp = *head;/*on déclare un pointeur temporaire*/
+	/*initialisation à head qui est le premier élèment de la liste*/
 
 	/*aloue la mémoire pour un nouveau noeud*/
 	/*taille de la valeur + taille du ptr = list_t*/
@@ -48,6 +49,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_noeud->next = NULL; /* Le nouveau nœud est le dernier */
 
 	/* Si la liste est vide, on met à jour la tête */
+	/*si elle est pas mise à jour, on perd en mémoire le noeud créé*/
 	if (*head == NULL)
 	{
 		*head = new_noeud;
