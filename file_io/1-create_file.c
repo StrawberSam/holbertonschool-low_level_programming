@@ -2,6 +2,23 @@
 #include <string.h>
 
 /**
+ * _strlen - check the code
+ *@s: character we use
+ * Return: count.
+ */
+
+int _strlen(const char *s)
+{
+	int count = 0;
+
+	while (s[count] != '\0')
+	{
+		count++;
+	}
+	return (count);
+}
+
+/**
  * create_file - Crée un fichier et y écrit du contenu, ou le crée vide.
  * @filename: Nom du fichier à créer.
  * @text_content: Contenu texte à écrire dans fichier (ou NULL pour vide).
@@ -23,7 +40,7 @@ int create_file(const char *filename, char *text_content)
 
 
 	if (text_content != NULL)/*si c'est pas null, écrire dedans*/
-		bytes_written = write(fichier, text_content, strlen(text_content));
+		bytes_written = write(fichier, text_content, _strlen(text_content));
 
 	if (bytes_written == -1)/*si l'écriture a échoué*/
 	{
