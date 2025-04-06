@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * delete_dnodeint_at_index - Supprime un nœud à un index donné dans la liste.
+ * delete_dnodeint_at_index - Supprime un nœud à un index donné.
  * @head: Pointeur vers le début de la liste.
  * @index: L'index du nœud à supprimer (commence à 0).
  * Return: 1 si réussi, -1 si échoué.
@@ -14,7 +14,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		return (-1);
 	}
-
 	/* On parcourt la liste pour trouver le nœud à l'index donné */
 	while (current != NULL && i < index)
 	{
@@ -26,7 +25,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		return (-1);
 	}
-
 	/* Si le nœud à supprimer est le premier (head) */
 	if (current->prev == NULL)
 	{
@@ -39,7 +37,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 		h1->next = h2;  /* Relie le nœud précédent au nœud suivant */
 	}
-
 	/* Si ce n'est pas le dernier nœud, on met à jour le nœud suivant */
 	if (current->next != NULL)
 	{
@@ -48,7 +45,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 		h2->prev = h1;  /* Relie le nœud suivant au nœud précédent */
 	}
-
 	free(current);  /* On libère la mémoire du nœud supprimé */
 	return (1);  /* Suppression réussie */
 }
