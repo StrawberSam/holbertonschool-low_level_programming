@@ -17,6 +17,13 @@ int _strlen(const char *s)
 	}
 	return (count);
 }
+/**
+ * append_text_to_file - Ajoute du texte à la fin d'un fichier.
+ * @filename: Le nom du fichier auquel ajouter du texte.
+ * @text_content: Le texte à ajouter à la fin du fichier.
+ *
+ * Return: 1 en cas de succès, -1 en cas d'échec.
+ */
 
 int append_text_to_file(const char *filename, char *text_content)
 {
